@@ -98,12 +98,12 @@ export default {
           routes: [
             {
               path: '/',
-              redirect: '/welcome',
+              redirect: '/edit-page',
             },
             {
               path: './edit-page',
-              name: 'PageEditor',
-              component: './PageEditor',
+              name: 'pageEditor',
+              component: './pageEditor',
             },
             {
               component: './404',
