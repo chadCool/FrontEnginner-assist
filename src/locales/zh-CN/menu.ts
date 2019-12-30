@@ -49,4 +49,7 @@ export default {
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
   'menu.test': '测试',
+  'menu.pageEditor': '页面编辑',
+  'menu.pageEditor.table': '表格编辑',
+  'menu.pageEditor.tabs': '分页编辑',
 };
