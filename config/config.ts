@@ -77,33 +77,47 @@ export default {
   // umi routes: https://umijs.org/zh/guide/router.html
   routes: [
     {
-      path: '/user',
-      component: '../layouts/UserLayout',
-      routes: [
-        {
-          name: 'login',
-          path: '/user/login',
-          component: './user/login',
-        },
-      ],
-    },
-    {
       path: '/',
-      component: '../layouts/SecurityLayout',
       routes: [
         {
           path: '/',
           component: '../layouts/BasicLayout',
-          authority: ['admin', 'user'],
           routes: [
             {
               path: '/',
-              redirect: '/edit-page',
+              redirect: '/edit-page/table',
             },
             {
-              path: './edit-page',
-              name: 'pageEditor',
-              component: './pageEditor',
+              path: '/edit-page',
+              icon: 'edit',
+              name: 'edit',
+              component: '../components/codeEditorWrapper',
+              routes: [
+                {
+                  path: '/edit-page/table',
+                  name: 'table',
+                  icon: 'table',
+                  component: './tableEditor',
+                },
+                {
+                  path: '/edit-page/form',
+                  name: 'form',
+                  icon: 'form',
+                  component: './formEditor',
+                },
+                {
+                  path: '/edit-page/list',
+                  name: 'list',
+                  icon: 'unordered-list',
+                  component: './listEditor',
+                },
+                {
+                  path: '/edit-page/tabs',
+                  name: 'tabs',
+                  icon: 'edit',
+                  component: './tabsEditor',
+                },
+              ],
             },
             {
               component: './404',

@@ -1,14 +1,7 @@
-import React, { FC } from 'react';
+import React from 'react';
 // import Div from './Div';
-import TableEditor from './Table';
 
-export interface WidgetType {
-  name: string;
-  tags: string[];
-  component: FC<any>;
-}
-
-export interface ComponentProps extends WidgetType {
+export interface ComponentProps {
   id: string;
 }
 
@@ -46,17 +39,3 @@ function logEmpty(session: string, template: string, dataKey: string, data: any,
 export const SourceUpdaterContext = React.createContext<ISourceUpdaterContext>({
   updateSource: logEmpty,
 });
-export default function getWidgetsTypes(): WidgetType[] {
-  return [
-    // {
-    //   name: 'div',
-    //   tags: ['container'],
-    //   component: Div,
-    // },
-    {
-      name: 'table',
-      tags: ['table'],
-      component: TableEditor,
-    },
-  ];
-}

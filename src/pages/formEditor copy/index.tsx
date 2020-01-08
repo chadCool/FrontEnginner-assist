@@ -5,10 +5,10 @@ import getWidgetsTypes, {
   ComponentProps,
   SourceUpdaterContext,
   WidgetType,
-} from '@/components/componentEditor';
+} from './node_modules/@/components/componentEditor';
 import styles from './index.less';
-import PageEdit from '@/components/PageEdit';
-import CodeLinkWrapper from '@/components/propsEditor/CodeLinkWrapper';
+import PageEdit from './node_modules/@/components/PageEdit';
+import CodeLinkWrapper from './node_modules/@/components/propsEditor/CodeLinkWrapper';
 
 export interface EditContext {
   add: (

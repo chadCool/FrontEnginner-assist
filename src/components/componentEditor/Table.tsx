@@ -46,13 +46,12 @@ const QueryContent = ({
 };
 
 export interface TableEditorProps extends ComponentProps {}
-const TableView: FC<TableEditorProps> = () => {
+const TableEditor: FC<TableEditorProps> = () => {
   const [baseDirEditor, baseDir] = useField('源码位置');
   const [nameEditor, name] = useField('业务前缀');
   // const { baseDir, name } = useContext(SourceContext);
   const [updateToken, setUpdateAll] = useState({ buttons: { reset: true } });
   const { updateSource } = useContext(SourceUpdaterContext);
-  const { linkToSource } = useContext(CodeLinkContext);
   return (
     <SourceContext.Provider value={{ baseDir, name }}>
       <div>
@@ -60,25 +59,6 @@ const TableView: FC<TableEditorProps> = () => {
       </div>
       {baseDirEditor} {nameEditor}
       <div>
-        <a
-          onClick={() =>
-            linkToSource(
-              'C:\\work\\helper\\FrontEndEngineer-assist\\src\\components\\propsEditor\\CodeLinkWrapper.tsx',
-            )
-          }
-        >
-          表格index.tsx
-        </a>
-        &nbsp;&nbsp;&nbsp;
-        <a
-          onClick={() =>
-            linkToSource(
-              'C:\\work\\helper\\FrontEndEngineer-assist\\src\\components\\propsEditor\\CodeLinkWrapper.tsx',
-            )
-          }
-        >
-          列index.columns.tsx
-        </a>
         <GroupField
           updateToken={updateToken}
           onChange={data => {
@@ -108,4 +88,4 @@ const TableView: FC<TableEditorProps> = () => {
   );
 };
 
-export default TableView;
+export default TableEditor;
