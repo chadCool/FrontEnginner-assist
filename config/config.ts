@@ -85,7 +85,6 @@ export default {
           routes: [
             {
               path: '/',
-<<<<<<< HEAD
               redirect: '/edit-page/table',
             },
             {
@@ -119,14 +118,6 @@ export default {
                   component: './tabsEditor',
                 },
               ],
-=======
-              redirect: '/edit-page',
-            },
-            {
-              path: './edit-page',
-              name: 'pageEditor',
-              component: './pageEditor',
->>>>>>> d5a87ffcab8dfded39e00112ac4340143369d43d
             },
             {
               component: './404',
