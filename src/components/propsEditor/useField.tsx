@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { Dispatch, SetStateAction } from 'react';
 import { Typography } from 'antd';
 
 const { Text } = Typography;
-const useField: (label: string) => [React.ReactNode, string] = label => {
-  const [field, setField] = useState<string>('');
+const useField: (label: string, field: string, setField: Dispatch<SetStateAction<string>>) => [React.ReactNode, string] = (label, field, setField) => {
   const SourceCodeEditor = (
     <span>
       {label}:

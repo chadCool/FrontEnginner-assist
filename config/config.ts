@@ -105,18 +105,6 @@ export default {
                   icon: 'form',
                   component: './formEditor',
                 },
-                {
-                  path: '/edit-page/list',
-                  name: 'list',
-                  icon: 'unordered-list',
-                  component: './listEditor',
-                },
-                {
-                  path: '/edit-page/tabs',
-                  name: 'tabs',
-                  icon: 'edit',
-                  component: './tabsEditor',
-                },
               ],
             },
             {

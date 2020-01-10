@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback, FC } from 'react';
 import { Card, Alert } from 'antd';
 import { SourceUpdaterContext } from '@/components/componentEditor';
-import PageEdit from '@/components/PageEdit';
 import { Intent } from 'octopus-end-web';
 import styles from './index.less';
 
@@ -61,9 +60,7 @@ const CodeEditorWrapper: FC<any> = ({ children }) => {
             <Alert message="连接中断, 点击重连。" banner />
           </a>
         )}
-        <PageEdit>
-          <Card>{children}</Card>
-        </PageEdit>
+        <Card>{children}</Card>
       </div>
     </SourceUpdaterContext.Provider>
   );
